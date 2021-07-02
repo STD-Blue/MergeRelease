@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace NotesDLL
 {
-    public class Note {
+    public partial class Note {
         public string NoteName;
         public string Text;
         public DateTime CreationData;
@@ -48,8 +48,8 @@ namespace NotesDLL
         public static List<Note> ReadFromFile(string path)
         {
             List<Note> notesFromFile = new List<Note>();
-            //string data = File.ReadAllText(path);
-            //data.Split('*').ToList().ForEach(x=> notesFromFile.Add(new Note(new string(x.TakeWhile(y => y!='>').ToArray()), x.x.IndexOf('>'),  x.ElementAt(x.Length-1))));
+            string data = File.ReadAllText(path);
+            //data.Split('*').ToList().ForEach(x=> notesFromFile.Add(new Note(new string(x.TakeWhile(y => y!='>').ToArray()), x.(x.IndexOf('>'), x.IndexOf('>') - x.IndexOf('*')),  x.ElementAt(x.Length-1))));
             return notesFromFile;
         }
     }
