@@ -8,9 +8,9 @@ namespace NotesDLL
 {
     public class Note
     {
-        public string NoteName;
-        public string Text;
-        public DateTime CreationData;
+        public string NoteName { get; private set; }
+        public string Text { get; private set; }
+        public DateTime CreationData { get; private set; }
         public Note()
         {
             NoteName = string.Empty;
