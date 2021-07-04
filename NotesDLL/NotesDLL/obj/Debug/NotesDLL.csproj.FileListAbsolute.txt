@@ -4,3 +4,9 @@ C:\Users\Student\Source\Repos\STD-Blue\Notes.DLL\NotesDLL\NotesDLL\obj\Debug\Not
 C:\Users\Student\Source\Repos\STD-Blue\Notes.DLL\NotesDLL\NotesDLL\obj\Debug\NotesDLL.csproj.CoreCompileInputs.cache
 C:\Users\Student\Source\Repos\STD-Blue\Notes.DLL\NotesDLL\NotesDLL\obj\Debug\NotesDLL.dll
 C:\Users\Student\Source\Repos\STD-Blue\Notes.DLL\NotesDLL\NotesDLL\obj\Debug\NotesDLL.pdb
+C:\Users\Al\Source\Repos\Notes.DLL\NotesDLL\NotesDLL\bin\Debug\NotesDLL.dll
+C:\Users\Al\Source\Repos\Notes.DLL\NotesDLL\NotesDLL\bin\Debug\NotesDLL.pdb
+C:\Users\Al\Source\Repos\Notes.DLL\NotesDLL\NotesDLL\obj\Debug\NotesDLL.csproj.AssemblyReference.cache
+C:\Users\Al\Source\Repos\Notes.DLL\NotesDLL\NotesDLL\obj\Debug\NotesDLL.csproj.CoreCompileInputs.cache
+C:\Users\Al\Source\Repos\Notes.DLL\NotesDLL\NotesDLL\obj\Debug\NotesDLL.dll
+C:\Users\Al\Source\Repos\Notes.DLL\NotesDLL\NotesDLL\obj\Debug\NotesDLL.pdb

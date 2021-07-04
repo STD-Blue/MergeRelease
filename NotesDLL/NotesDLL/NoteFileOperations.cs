@@ -40,7 +40,7 @@ namespace NotesDLL
             bool res = false;
             if (notes.Where(x => x != null).Count() == notes.Length)
             {
-                notes.ToList().ForEach(x => File.WriteAllText(path, $"{x.NoteName}\n\n>{x.Text}\n{x.CreationData.Date}\n*\n\n"));
+                notes.ToList().ForEach(x => File.WriteAllText(path, $"{x.NoteName}\n\n>{x.Text}\n<{x.CreationData.Date}\n*\n\n"));
             }
             return res;
         }
@@ -49,7 +49,11 @@ namespace NotesDLL
         {
             List<Note> notesFromFile = new List<Note>();
             string data = File.ReadAllText(path);
-            //data.Split('*').ToList().ForEach(x=> notesFromFile.Add(new Note(new string(x.TakeWhile(y => y!='>').ToArray()), x.(x.IndexOf('>'), x.IndexOf('>') - x.IndexOf('*')),  x.ElementAt(x.Length-1))));
+            try
+            {
+                data.Split('*').ToList().ForEach(x => notesFromFile.Add(new Note(new string(x.TakeWhile(y => y != '>').ToArray()), x.Substring(x.IndexOf('>'), x.IndexOf('<') - x.IndexOf('>')), DateTime.Parse(x.Substring(x.IndexOf('<'), x.LastIndexOf('*') - x.LastIndexOf('<'))))));
+            }
+            catch { }
             return notesFromFile;
         }
     }
