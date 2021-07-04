@@ -14,7 +14,11 @@ namespace NotesDLL
             {
                 try
                 {
-                    File.WriteAllText(path, $"{note.NoteName}\n\n{note.Text}\n{note.CreationData.Date}");
+                    if (File.Exists(path))
+                    {
+                        File.Delete(path);
+                    }
+                    File.WriteAllText(path, $"{note.NoteName}\n>{note.Text}\n<{note.CreationData.Date}|\n\n*");
                     res = true;
                 }
                 catch { }
@@ -28,7 +32,11 @@ namespace NotesDLL
             {
                 try
                 {
-                    notes.ToList().ForEach(x => File.WriteAllText(path, $"{x.NoteName}\n\n>{x.Text}\n<{x.CreationData.Date}\n*\n\n"));
+                    if (File.Exists(path))
+                    {
+                        File.Delete(path);
+                    }
+                    notes.ToList().ForEach(x => File.WriteAllText(path, $"{x.NoteName}\n>{x.Text}\n<{x.CreationData.Date}|\n\n*"));
                     res = true;
                 }
                 catch { }
@@ -42,11 +50,8 @@ namespace NotesDLL
             if (path != null && File.Exists(path))
             {
                 string data = File.ReadAllText(path);
-                try
-                {
-                    data.Split('*').ToList().ForEach(x => notesFromFile.Add(new Note(new string(x.TakeWhile(y => y != '>').ToArray()), x.Substring(x.IndexOf('>'), x.IndexOf('<') - x.IndexOf('>')), DateTime.Parse(x.Substring(x.IndexOf('<'), x.LastIndexOf('*') - x.LastIndexOf('<'))))));
-                }
-                catch { }
+                data.Split('*').ToList().ForEach(x => { if (x.Count() > 5) { notesFromFile.Add(new Note(new string(x.TakeWhile(y => y != '>').ToArray()), x.Substring(x.LastIndexOf('>') + 1, x.LastIndexOf('<') - x.LastIndexOf('>') - 1), DateTime.Parse(x.Substring(x.IndexOf('<') + 1, x.LastIndexOf('|') - x.LastIndexOf('<') - 1)))); } });
+
             }
             else
             {
