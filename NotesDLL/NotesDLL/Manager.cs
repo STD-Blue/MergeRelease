@@ -19,5 +19,13 @@ namespace NotesDLL
         {
             this.notes.RemoveAt(notes.FindIndex(item => item.NoteName == noteName));
         }
+        public void SaveAllNotes(string path)
+        {
+            NoteFileOperations.SaveNotes(path, notes.ToArray());
+        }
+        public void SaveNote(string noteName, string path)
+        {
+            NoteFileOperations.SaveNote(this.notes.Find(item => item.NoteName == noteName), path);
+        }
     }
 }
