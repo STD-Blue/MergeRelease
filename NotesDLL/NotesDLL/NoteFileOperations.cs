@@ -5,25 +5,6 @@ using System.Linq;
 
 namespace NotesDLL
 {
-    public partial class Note {
-        public string NoteName;
-        public string Text;
-        public DateTime CreationData;
-        public Note()
-        {
-            NoteName = string.Empty;
-            Text = string.Empty;
-            CreationData = new DateTime();
-        }
-        public Note(string noteName, string text, DateTime creationData)
-        {
-            Text = text;
-            NoteName = noteName;
-            CreationData = creationData;
-        }
-    }
-
-
     public static class NoteFileOperations
     {
         public static bool SaveNote(Note note, string path)
