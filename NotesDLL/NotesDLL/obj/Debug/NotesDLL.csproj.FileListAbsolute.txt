@@ -1,0 +1,6 @@
+C:\Users\margo\Source\Repos\Notes.DLL\NotesDLL\NotesDLL\bin\Debug\NotesDLL.dll
+C:\Users\margo\Source\Repos\Notes.DLL\NotesDLL\NotesDLL\bin\Debug\NotesDLL.pdb
+C:\Users\margo\Source\Repos\Notes.DLL\NotesDLL\NotesDLL\obj\Debug\NotesDLL.csproj.AssemblyReference.cache
+C:\Users\margo\Source\Repos\Notes.DLL\NotesDLL\NotesDLL\obj\Debug\NotesDLL.csproj.CoreCompileInputs.cache
+C:\Users\margo\Source\Repos\Notes.DLL\NotesDLL\NotesDLL\obj\Debug\NotesDLL.dll
+C:\Users\margo\Source\Repos\Notes.DLL\NotesDLL\NotesDLL\obj\Debug\NotesDLL.pdb

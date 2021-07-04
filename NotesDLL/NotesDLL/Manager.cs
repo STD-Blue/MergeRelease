@@ -1,21 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NotesDLL
 {
     public class Manager
     {
-        public Note note { get; private set; }
+        public List<Note> notes { get; private set; }
         public Manager()
         {
-            note = new Note();
+            notes = new List<Note>();
         }
-        public Manager(string noteName, string text, DateTime creationData)
+        public void CreateNote(string noteName, string text, DateTime creationData)
         {
-            this.note = new Note(noteName, text, creationData);
+            this.notes.Add(new Note(noteName, text, creationData));
+        }
+        public void DeleteNote(string noteName)
+        {
+            this.notes.RemoveAt(notes.FindIndex(item => item.NoteName == noteName));
         }
     }
 }
