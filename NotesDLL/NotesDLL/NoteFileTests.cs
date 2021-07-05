@@ -3,50 +3,30 @@ using System;
 
 namespace NotesDLL.Test
 {
-    public partial class Note
-    {
-        public string NoteName;
-        public string Text;
-        public DateTime CreationData;
-        public Note()
-        {
-            NoteName = string.Empty;
-            Text = string.Empty;
-            CreationData = new DateTime();
-        }
-        public Note(string noteName, string text, DateTime creationData)
-        {
-            Text = text;
-            NoteName = noteName;
-            CreationData = creationData;
-        }
-    }
 
-
-    
     public class FileNoteTests
     {
 
         [Test]
         public void TestIsTrueStandartConstruct()
         {
-            Assert.True(NoteFileOperations.SaveNote(new Note(), "text.txt"));
+            Assert.True(NoteFileOperations.SaveNote("text.txt", new Note()));
         }
         [Test]
         public void TestIsTrueParametrized()
         {
-            Assert.True(NoteFileOperations.SaveNote(new Note("123", "123", DateTime.Now), "text.txt"));
+            Assert.True(NoteFileOperations.SaveNote("text.txt", new Note("123", "123", DateTime.Now)));
         }
 
         [Test]
         public void TestIsFalseNullNote()
         {
-            Assert.False(NoteFileOperations.SaveNote(null, "text.txt"));
+            Assert.False(NoteFileOperations.SaveNote("text.txt", null));
         }
         [Test]
         public void TestIsFalseNullString()
         {
-            Assert.False(NoteFileOperations.SaveNote(new Note("123", "123", DateTime.Now), null));
+            Assert.False(NoteFileOperations.SaveNote(null, new Note("123", "123", DateTime.Now)));
         }
 
         [Test]

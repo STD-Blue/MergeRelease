@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Manager.cs" />
+    <Compile Include="Note.cs" />
     <Compile Include="NoteFileOperations.cs" />
     <Compile Include="NoteFileTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

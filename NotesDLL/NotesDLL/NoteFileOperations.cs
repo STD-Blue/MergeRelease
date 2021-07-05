@@ -7,7 +7,7 @@ namespace NotesDLL
 {
     public static class NoteFileOperations
     {
-        public static bool SaveNote(Note note, string path)
+        public static bool SaveNote(string path, Note note)
         {
             bool res = false;
             if (note != null)
@@ -34,7 +34,7 @@ namespace NotesDLL
                 {
                     if (File.Exists(path))
                     {
-                        File.Delete(path);
+                        File.Delete(path); 
                     }
                     notes.ToList().ForEach(x => File.WriteAllText(path, $"{x.NoteName}\n>{x.Text}\n<{x.CreationData.Date}|\n\n*"));
                     res = true;
