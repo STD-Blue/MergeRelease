@@ -4,16 +4,16 @@ using System.Linq;
 
 namespace NotesDLL
 {
-    public class Manager
+    public static class Manager
     {
-        public List<Note> notes { get; private set; }
-        public Manager()
-        {
-            notes = new List<Note>();
-        }
+        public static List<Note> notes { get; private set; } = new List<Note>();
         public void CreateNote(string noteName, string text, DateTime creationData)
         {
             this.notes.Add(new Note(noteName, text, creationData));
+        }
+        public static string TakeTextNote(string notename)
+        {
+            return notes.Find(x => x.NoteName == notename).Text;
         }
         public void DeleteNote(string noteName)
         {
@@ -21,11 +21,23 @@ namespace NotesDLL
         }
         public void SaveAllNotes(string path)
         {
-            NoteFileOperations.SaveNotes(path, notes.ToArray());
+            if (path.EndsWith(".txt"))
+            {
+                NoteFileOperations.SaveNotes(path, notes.ToArray());
+            }
+            else
+            {
+                path += ".txt";
+                NoteFileOperations.SaveNotes(path, notes.ToArray());
+            }
         }
         public void SaveNote(string noteName, string path)
         {
             NoteFileOperations.SaveNote(this.notes.Find(item => item.NoteName == noteName), path);
+        }
+        public static void ReadNotesFromFile(string path)
+        {
+            notes = NoteFileOperations.ReadFromFile(path);
         }
     }
 }
