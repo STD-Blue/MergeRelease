@@ -4,9 +4,9 @@ namespace NotesDLL
 {
     public class Note
     {
-        public string NoteName { get; private set; }
-        public string Text { get; private set; }
-        public DateTime CreationData { get; private set; }
+        public string NoteName { get; set; }
+        public string Text { get; set; }
+        public DateTime CreationData { get; set; }
         public Note()
         {
             NoteName = string.Empty;
