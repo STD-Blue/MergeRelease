@@ -6,28 +6,43 @@ using System.Threading.Tasks;
 
 namespace NotesDLL
 {
-    public class Manager
+    public static class Manager
     {
-        public List<Note> notes { get; private set; }
-        public Manager()
+        public static List<Note> notes { get; private set; } = new List<Note>();
+
+
+        public static void CreateNote(string noteName, string text, DateTime creationData)
         {
-            notes = new List<Note>();
+            notes.Add(new Note(noteName, text, creationData));
         }
-        public void CreateNote(string noteName, string text, DateTime creationData)
+        public static string TakeTextNote(string notename)
         {
-            this.notes.Add(new Note(noteName, text, creationData));
+            return notes.Find(x => x.NoteName == notename).Text;
         }
-        public void DeleteNote(string noteName)
+        public static void DeleteNote(string noteName)
         {
-            this.notes.RemoveAt(notes.FindIndex(item => item.NoteName == noteName));
+            notes.RemoveAt(notes.FindIndex(item => item.NoteName == noteName));
         }
-        public void SaveAllNotes(string path)
+        public static void SaveAllNotes(string path)
         {
-            NoteFileOperations.SaveNotes(path, notes.ToArray());
+
+            if (path.EndsWith(".txt"))
+            {
+                NoteFileOperations.SaveNotes(path, notes.ToArray());
+            }
+            else
+            {
+                path += ".txt";
+                NoteFileOperations.SaveNotes(path, notes.ToArray());
+            }
         }
-        public void SaveNote(string noteName, string path)
+        public static void SaveNote(string noteName, string path)
         {
-            NoteFileOperations.SaveNote(path,this.notes.Find(item => item.NoteName == noteName));
+            NoteFileOperations.SaveNote(path, notes.Find(item => item.NoteName == noteName));
+        }
+        public static void ReadNotesFromFile(string path)
+        {
+            notes = NoteFileOperations.ReadFromFile(path);
         }
     }
 }

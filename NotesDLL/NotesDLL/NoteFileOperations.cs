@@ -25,6 +25,7 @@ namespace NotesDLL
             }
             return res;
         }
+
         public static bool SaveNotes(string path, params Note[] notes)
         {
             bool res = false;
@@ -34,9 +35,9 @@ namespace NotesDLL
                 {
                     if (File.Exists(path))
                     {
-                        File.Delete(path); 
+                        File.Delete(path);
                     }
-                    notes.ToList().ForEach(x => File.WriteAllText(path, $"{x.NoteName}\n>{x.Text}\n<{x.CreationData.Date}|\n\n*"));
+                    notes.ToList().ForEach(x => File.AppendAllText(path, $"{x.NoteName}>{x.Text}\n<{x.CreationData.Date}|\n\n*"));
                     res = true;
                 }
                 catch { }
