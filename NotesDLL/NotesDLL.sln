@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotesDLL", "NotesDLL\NotesDLL.csproj", "{26AD8DF9-8C03-417C-B9EC-C8143E5428F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotesGUI", "..\..\..\..\Downloads\Released-main\Released-main\NotesGUI\NotesGUI.csproj", "{8A43D595-E225-4CEE-9FAE-564D9EE0F129}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotesGUI", "NotesGUI\NotesGUI.csproj", "{8A43D595-E225-4CEE-9FAE-564D9EE0F129}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
