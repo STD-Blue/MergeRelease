@@ -37,3 +37,12 @@ C:\Users\Gray\Source\Repos\Notes.DLL\NotesDLL\NotesDLL\obj\Debug\NotesDLL.csproj
 C:\Users\Gray\Source\Repos\Notes.DLL\NotesDLL\NotesDLL\obj\Debug\NotesDLL.csproj.CopyComplete
 C:\Users\Gray\Source\Repos\Notes.DLL\NotesDLL\NotesDLL\obj\Debug\NotesDLL.dll
 C:\Users\Gray\Source\Repos\Notes.DLL\NotesDLL\NotesDLL\obj\Debug\NotesDLL.pdb
+C:\Users\Al\Source\Repos\MergeRelease\NotesDLL\NotesDLL\bin\Debug\NotesDLL.dll
+C:\Users\Al\Source\Repos\MergeRelease\NotesDLL\NotesDLL\bin\Debug\NotesDLL.pdb
+C:\Users\Al\Source\Repos\MergeRelease\NotesDLL\NotesDLL\bin\Debug\nunit.framework.dll
+C:\Users\Al\Source\Repos\MergeRelease\NotesDLL\NotesDLL\bin\Debug\nunit.framework.xml
+C:\Users\Al\Source\Repos\MergeRelease\NotesDLL\NotesDLL\obj\Debug\NotesDLL.csproj.AssemblyReference.cache
+C:\Users\Al\Source\Repos\MergeRelease\NotesDLL\NotesDLL\obj\Debug\NotesDLL.csproj.CoreCompileInputs.cache
+C:\Users\Al\Source\Repos\MergeRelease\NotesDLL\NotesDLL\obj\Debug\NotesDLL.csproj.CopyComplete
+C:\Users\Al\Source\Repos\MergeRelease\NotesDLL\NotesDLL\obj\Debug\NotesDLL.dll
+C:\Users\Al\Source\Repos\MergeRelease\NotesDLL\NotesDLL\obj\Debug\NotesDLL.pdb
